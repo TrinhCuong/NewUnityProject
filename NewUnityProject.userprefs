@@ -1,4 +1,8 @@
 ﻿<Properties>
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench />
+=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Test2.cs">
     <Files>
@@ -6,6 +10,7 @@
       <File FileName="Assets\Scripts\Test2.cs" Line="8" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+>>>>>>> f57de76cb4b32228c6dfd99bf421db921d6c6821
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
