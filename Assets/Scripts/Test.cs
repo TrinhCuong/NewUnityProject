@@ -16,5 +16,6 @@ public class Test : MonoBehaviour
 		yield return w;
 		if(w.isDone)
 			renderer.material.mainTexture = w.texture;
+		///fwehgjehrgjerge
 	}
 }
