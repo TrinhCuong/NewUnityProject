@@ -3,15 +3,18 @@ using System.Collections;
 
 public class Test : MonoBehaviour 
 {
-
 	// Use this for initialization
 	void Start () 
 	{
-		//Fixed error
+		StartCoroutine(download());
+		
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	IEnumerator download()
+	{
+		WWW w = new WWW("https://github.com/TrinhCuong/NewUnityProject/blob/master/Assets/Textures/Koala.jpg");
+		yield return w;
+		if(w.isDone)
+			renderer.material.mainTexture = w.texture;
 	}
 }
