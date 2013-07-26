@@ -15,7 +15,7 @@ public class Test : MonoBehaviour
 	static void BuildScene()
 	{
 		string[] levels = new string[]{"Assets/Scene1.unity"};
-		if(string.IsNullOrEmpty(BuildPipeline.BuildStreamedSceneAssetBundle(levels,"Assets/Scenes.unity3d",BuildTarget.WebPlayer)))
+		if(string.IsNullOrEmpty(BuildPipeline.BuildStreamedSceneAssetBundle(levels,"Assets/Scenes.unity3d",BuildTarget.StandaloneWindows)))
 			Debug.Log("ok");
 		else
 			Debug.Log("no ok");
