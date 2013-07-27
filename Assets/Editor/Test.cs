@@ -16,4 +16,11 @@ public class Test : MonoBehaviour
 			BuildPipeline.BuildAssetBundle(Selection.activeObject, Selection.objects, path);
 		}
 	}
+	
+	[MenuItem("Assets/Build Scenes")]
+	static void ExportScenes () 
+	{
+		string[] levels = new string[]{"Assets/Scene1.unity"};
+		BuildPipeline.BuildStreamedSceneAssetBundle(levels,"Assets/AssetBundle/Scenes.unity3d",BuildTarget.StandaloneWindows);
+	}
 }
