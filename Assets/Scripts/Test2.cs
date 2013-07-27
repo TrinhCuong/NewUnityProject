@@ -12,18 +12,16 @@ public class Test2 : MonoBehaviour {
 	// Update is called once per frame
 	IEnumerator LoadScenes () 
 	{
-		string url = "https://github.com/TrinhCuong/NewUnityProject/blob/master/Assets/Scenes.unity3d";
+		string url = "https://github.com/TrinhCuong/NewUnityProject/blob/master/Assets/Scenes.unity3d?raw=true";
 		WWW www = new WWW(url);
 		yield return www;
-		if(www.isDone)
+		if(www.isDone && string.IsNullOrEmpty(www.error))
 		{
-			Debug.Log("OK");
-			Debug.Log(www.error);
+			AssetBundle assset = www.assetBundle;
 		}
 		else
 		{
 			Debug.Log("No Ok");
 		}
-		
 	}
 }

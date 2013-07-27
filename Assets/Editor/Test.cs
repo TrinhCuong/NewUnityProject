@@ -4,20 +4,16 @@ using System.Collections;
 
 public class Test : MonoBehaviour 
 {
-	// Use this for initialization
-	void Start () 
-	{
-		
-		
-	}
 	
-	[MenuItem("Assets/Build Scenes To Asset Bundles")]
-	static void BuildScene()
+	[MenuItem("Assets/Build AssetBundle From Selection - No dependency tracking")]
+	static void ExportResourceNoTrack () 
 	{
-		string[] levels = new string[]{"Assets/Scene1.unity"};
-		if(string.IsNullOrEmpty(BuildPipeline.BuildStreamedSceneAssetBundle(levels,"Assets/Scenes.unity3d",BuildTarget.StandaloneWindows)))
-			Debug.Log("ok");
-		else
-			Debug.Log("no ok");
+		// Bring up save panel
+		string path = EditorUtility.SaveFilePanel ("Save Resource", "", "New Resource", "unity3d");
+		if (path.Length != 0) 
+		{
+			// Build the resource file from the active selection.
+			BuildPipeline.BuildAssetBundle(Selection.activeObject, Selection.objects, path);
+		}
 	}
 }
